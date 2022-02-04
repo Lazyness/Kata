@@ -11,7 +11,12 @@ public class Main {
 //        System.out.println(kata.order("is2 Thi1s T4est 3a"));
 //        String[]newWordsArray = {"2","1","4","3"};
 //        Kata.sortBubble(newWordsArray);
-        System.out.println(Kata.disemvowel("This website is for losers LOL!"));
+//        System.out.println(Kata.disemvowel("This website is for losers LOL!"));
+        Kata.digitize(348597);
+        int[] l = Kata.digitize(348597);
+        for (int i = 0; i < l.length; i++) {
+            System.out.println(l[i]+" ");
+        }
         return;
     }
 }

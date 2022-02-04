@@ -251,6 +251,28 @@ public class Kata {
         return (foundNum - (int) (foundNum) == 0) ? (long) Math.pow((foundNum + 1), 2) : -1;
     }
 
+    // 348597 => [7,9,5,8,4,3]
+    // 0 => [0]
+    public static int[] digitize(long n) {
+        // Code here
+        int[] arr = new int[1];
+        String[] tempArr = (n + "").split("");
+        for (int i = 0; i < tempArr.length; i++) {
+            int[] temp = new int[arr.length + 1];
 
+            arr[i] = Integer.parseInt(String.valueOf(tempArr[i].charAt(0)));
+
+            for (int j = 0; j < arr.length; j++) {
+                temp[j] = arr[j];
+            }
+            arr = temp;
+        }
+        //reverse
+        int[] newTempArr = new int[tempArr.length];
+        for (int i = tempArr.length - 1, j = 0; i > -1; i--, j++) {
+            newTempArr[j] = arr[i];
+        }
+        return newTempArr;
+    }
 
 }
